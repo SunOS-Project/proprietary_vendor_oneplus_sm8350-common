@@ -482,6 +482,9 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/odm/firmware/tp/21617/LIMIT_FT3658U_SAMSUNG.img:$(TARGET_COPY_OUT_ODM)/firmware/tp/21617/LIMIT_FT3658U_SAMSUNG.img \
     vendor/oneplus/sm8350-common/proprietary/odm/firmware/wentai24k_rtp.bin:$(TARGET_COPY_OUT_ODM)/firmware/wentai24k_rtp.bin \
     vendor/oneplus/sm8350-common/proprietary/product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.android.hotwordenrollment.common.util.xml \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/etc/horae/horae.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/horae/horae.conf \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/etc/horae/horae_SM8350.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/horae/horae_SM8350.conf \
+    vendor/oneplus/sm8350-common/proprietary/system_ext/etc/init/horae.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/horae.rc \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/OnePlus_QC_LTM_Commercial_SM8350_2021_01_19.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/OnePlus_QC_LTM_Commercial_SM8350_2021_01_19.pfm \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/Oplus_QC_LTM_Commercial_SM7325_2021_05_20.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/Oplus_QC_LTM_Commercial_SM7325_2021_05_20.pfm \
     vendor/oneplus/sm8350-common/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
@@ -749,6 +752,9 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin
 
 PRODUCT_PACKAGES += \
+    libostatslog \
+    vendor.oplus.hardware.displaypanelfeature-V1-ndk \
+    vendor.oplus.hardware.performance-V1-ndk \
     btaudio_offload_if \
     eglSubDriverAndroid \
     libEGL_adreno \
@@ -1275,6 +1281,8 @@ PRODUCT_PACKAGES += \
     libvpp_ais_networks \
     libvpt_action_recognition \
     libworker_pool \
+    vendor.oplus.hardware.charger-V1-ndk \
+    vendor.oplus.hardware.displaypanelfeature@1.0 \
     libbluetooth_audio_extend_factory_client \
     libc++_shared \
     vendor.oplus.hardware.bluetooth_audio_extend@2.1 \
@@ -1311,7 +1319,7 @@ PRODUCT_PACKAGES += \
     vendor.oplus.hardware.charger@1.0 \
     vendor.oplus.hardware.communicationcenter_compat@1.0 \
     vendor.oplus.hardware.cwb@1.0 \
-    vendor.oplus.hardware.displaypanelfeature@1.0 \
+    vendor.oplus.hardware.displaypanelfeature@1.0_odm \
     vendor.oplus.hardware.ims@1.0 \
     vendor.oplus.hardware.mmdisplayfeature@1.0 \
     vendor.oplus.hardware.osense.client-V1-ndk_platform_odm \
@@ -1430,6 +1438,7 @@ PRODUCT_PACKAGES += \
     xtra-daemon \
     xtwifi-client \
     xtwifi-inet-agent \
+    horae \
     cwb_utils \
     android.hardware.drm@1.3-service.widevine \
     vendor.oplus.hardware.charger-V3-service \
